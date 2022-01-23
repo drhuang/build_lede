@@ -97,7 +97,7 @@ jobs:
         make defconfig
         make download -j8
         mkdir -p package/lean/rblibtorrent/patches
-        mv $SSL_PATCH_FILE package/lean/rblibtorrent/patches
+        mv ../$SSL_PATCH_FILE package/lean/rblibtorrent/patches
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
 
